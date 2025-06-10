@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="estilo.css">
+
+        <script src="componentes/fullcalendar-6.1.17/dist/index.global.min.js"></script>
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                var calendarEl = document.getElementById('calendar');
+
+                var calendar = new FullCalendar.Calendar(calendarEl, {
+                    initialView: 'dayGridMonth',
+                    height: 'auto',
+                    headerToolbar:{
+                        left:'prev,next today',
+                        center:'title',
+                        right: 'dayGridMonth,timeGridweek,TimeGridDay'
+                    },
+                });
+
+                calendar.render();
+            });
+        </script>
+        
+        <title>ServFácil - seu App de Serviços</title>
+    </head>
+
+    <body>
+        <div class="container">
+            <div class="menu">
+                <div class="logo">
+                    <h1>
+                        <span class="serv">serv</span><span class="facil">facil</span>
+                    </h1>
+                </div>
+                <div class="menu-links">
+                        <div class="links">
+                            <a href="index.html">inicio</a>
+                            <a href="clientes.html">Clientes</a>
+                            <a href="Orcamentos.html">Orçamentos</a>
+                            <a href="Servicos.html">Serviços</a>
+                            <a class="ativo" href="agenda.html">Agenda de Serviços</a>
+                            <a href="fila.html">Fila de Trabalho</a>
+                            <a href="Lembretes.html">Lembretes</a>
+                        </div>
+                        
+                        <div class="links">
+                            <a href="sair.html">Sair</a>
+                        </div>
+                </div>
+            </div>
+            <div class="conteudo">
+                <div class="agenda">
+                    <div id='calendar'></div>
+                </div>
+            </div>
+        </div>
+</body>
+</html>

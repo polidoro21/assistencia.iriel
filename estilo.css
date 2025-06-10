@@ -1,0 +1,142 @@
+body {
+    margin: 0;
+    padding: 0;
+
+    min-width: 100vh;
+    display: flex;
+    
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+/* O container está segurando todos os elementos do site, contendo a barra lateral (.menu) e a area de conteudo (.conteudo), como precisam ficar lado a lado usando o flexbox flex-direction row */
+.container {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+/* O menu contem o conteúdo da barra lateral e precisa ser flex para o comportamento dos filhos ser habilitado */
+.menu {
+    display: flex;
+    flex-direction: column;
+    min-width: 200px;
+}
+
+/* Esta classe é responsável por conter os links do menu lateral e organizar sua disposição, os links estão organizados em 2 grupos (.links) usamos o space-between para que os grupos tenham espaço entre eles, fazendo o sair ficar no final da página (baixo)   */
+.menu-links {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex: 1;
+}
+
+.menu-links .links {
+    display: flex;
+    flex-direction: column;
+}
+
+.menu-links .links a {
+    text-decoration: none;
+    padding: 20px 10px;
+}
+
+.menu-links .links a:hover,
+.menu-links .links a.ativo
+{
+    background-color: indigo;
+    color: #fff;
+    font-weight: bold;
+}
+
+/* Logo */
+
+.logo {
+    background-color: #7c0aceab;
+}
+
+.logo h1 {
+    text-align: center;
+}
+
+.logo h1 .serv{
+    color: white;
+}
+.logo h1 .facil{
+    color: indigo;
+}
+
+.conteudo {
+    background-color: indigo;
+    flex: 1;
+    padding: 10px;
+}
+
+.conteudo .titulo {
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 5px;   
+}
+
+.conteudo .card {
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.acoes {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    gap: 10px;
+    margin: 10px 0;
+}
+
+.acoes .botao {
+    border: 1px solid #fff;
+    background-color: #8e0ee4a6;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.acoes .botao:hover {
+    background-color: indigo;
+    color: #fff;
+    font-weight: bold;
+    border: 1px solid #8e0ee4a6;
+}
+
+.campo-formulario {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    flex: 1;
+
+    & label {
+        color: indigo;
+    }
+
+    & input, & select {
+        padding: 10px;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+        font-size: 16px;
+    }
+}
+
+.linha {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    flex: 1;
+}
+
+.agenda {
+    padding: 10px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px #000
+}
